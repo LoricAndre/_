@@ -5,7 +5,12 @@ target="/tmp/trizen"
 info "Updating packages..."
 sudo pacman -Syu
 info "Done updating packages."
+info "Installing base-devel..."
+sudo pacman -S --needed base-devel
+info "Done."
+info "Cloning to ${target}..."
 git clone https://aur.archlinux.org/trizen.git "${target}" || warn "Failed to clone repo to ${target}"
+info "Done."
 cd /tmp/trizen || err "Failed to cd to ${target}"
 makepkg -si
 cd - >/dev/null || warn "Failed to get back to previous directory."
