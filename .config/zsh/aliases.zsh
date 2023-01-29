@@ -27,7 +27,7 @@ alias mkdir="mkdir -p"
 
 alias py='python3'
 cat() {
-  bat || \cat
+  bat $@ || \cat $@
 }
 
 alias mkdir='mkdir -p'
@@ -82,7 +82,7 @@ alias gn='n +"Telescope repo list"'
 alias :e='n'
 
 xdg-open() {
-  [ -z $(uname -r | grep WSL) ] && \xdg-open $@ || powershell.exe -c start $@
+  [ -z $(uname -r | grep WSL) ] && "$(sh -c 'which xdg-open')" $@ || powershell.exe -c start $@
 }
 
 vnmap() {

@@ -1,78 +1,9 @@
 #!/usr/bin/env bash
 
-NOCOLOR='\033[0m'
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-ORANGE='\033[0;33m'
-BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-LIGHTGRAY='\033[0;37m'
-DARKGRAY='\033[1;30m'
-LIGHTRED='\033[1;31m'
-LIGHTGREEN='\033[1;32m'
-YELLOW='\033[1;33m'
-LIGHTBLUE='\033[1;34m'
-LIGHTPURPLE='\033[1;35m'
-LIGHTCYAN='\033[1;36m'
-WHITE='\033[1;37m'
-
-INFO="${GREEN}[INFO]${NOCOLOR}"
-WARNING="${GREEN}[WARNING]${NOCOLOR}"
-ERROR="${GREEN}[ERROR]${NOCOLOR}"
-
-info() {
-  echo -e "${INFO} $*"
-}
-warn() {
-  echo -e "${WARNING} $*"
-}
-err() {
-  echo -e "${ERROR} $*"
-  return 1
-}
-
-PACKAGES="$HOME/.config/yadm/packages"
+shell="zsh"
+packages="$HOME/.config/yadm/packages"
 
 
-submodules() {
-  cd "$HOME" || err "Failed to cd to $HOME"
-
-  info "Initializing submodules..."
-  yadm submodule update --recursive --init
-  info "Done."
-}
-
-install_trizen() {
-  target="/tmp/trizen"
-  info "Installing trizen..."
-  info "Updating packages..."
-  sudo pacman -Syu
-  info "Done updating packages."
-  git clone https://aur.archlinux.org/trizen.git "${target}" || warn "Failed to clone repo to ${target}"
-  cd /tmp/trizen || err "Failed to cd to ${target}"
-  makepkg -si
-  cd - >/dev/null || warn "Failed to get back to previous directory."
-  info "Deleting ${target} dir..."
-  rm -rf "${target}"
-  info "Done deleting target dir."
-  info "Done installing trizen."
-}
-
-packages() {
-  packages=($(cat "${PACKAGES}"))
-  info "Installing packages..."
-  echo $packages
-  trizen -S --needed "${packages[@]}"
-  info "Done."
-}
-
-set_shell() {
-  sudo chsh -s $(which "$1") "$USER"
-}
-
-submodules
-
-trizen --version >/dev/null || install_trizen
-packages
-set_shell zsh
+for f in "$HOME"/.config/yadm/bootstrap.d/*.sh; do
+  [ -f "$f" ] && source "$f"
+done

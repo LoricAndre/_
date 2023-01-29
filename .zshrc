@@ -24,7 +24,6 @@ fpath=($HOME/bin /usr/share/zsh/site-functions $fpath)
 autoload -Uz compinit
 compinit
 
-[ -z $ZDOTDIR ] && export ZDOTDIR=$HOME/.config/zsh/
-for f in $(ls "$ZDOTDIR"); do
-  [ -f "${ZDOTDIR}${f}" ] && source "${ZDOTDIR}${f}"
+for f in $HOME/.config/zsh/*.zsh; do
+  [ -f "${f}" ] && source "${f}"
 done
