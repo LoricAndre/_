@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+yadm submodule foreach << EOF
+  cd "${HOME}" || return 1
+  message="$(yadm log -n 1 --format='[AutoCommit] %s')"
+  cd -
+  git commit -m "${message}"
+EOF
