@@ -13,8 +13,11 @@ alias h='history'
 alias ..='cd ..'
 alias ...='cd ...'
 alias ...='cd ../..'
+
 top() {
   btm || \top
+}
+
 alias s='status'
 alias :qa='exit'
 alias :q='clear'
@@ -77,12 +80,13 @@ alias bashupload='curl https://bashupload.com -T'
 alias tf='terraform'
 alias gn='n +"Telescope repo list"'
 alias :e='n'
-alias gf='g a && g c && g p'
+
 xdg-open() {
-  [ -z $(uname -r | grep WSL) ] && xdg-open $@ || powershell.exe -c start $@
+  [ -z $(uname -r | grep WSL) ] && \xdg-open $@ || powershell.exe -c start $@
 }
 
 vnmap() {
   nmap -Pn -sV --script vuln $@ | grep -C1 VULNERABLE | grep IDs | sed -n 's/^.*IDs:.*:\(.*\)$/\1/p'
 }
-alias pipr=pip install -r
+
+alias pipr='pip install -r'
