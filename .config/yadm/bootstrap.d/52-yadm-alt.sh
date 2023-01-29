@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 info "Creating alt files..."
-yadm alt
+zsh -i -c 'yadm alt'
 info "Done."
