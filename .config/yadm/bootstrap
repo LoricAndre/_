@@ -1,9 +1,12 @@
 #!/usr/bin/env -S bash -i
 
 shell="zsh"
-packages="$HOME/.config/yadm/packages"
+yadm_dir="$HOME/.config/yadm"
+packages="${yadm_dir}/packages"
+env_file="${yadm_dir}/env"
 
 
+. "$env_file"
 for f in "$HOME"/.config/yadm/bootstrap.d/*.sh; do
   [ -f "$f" ] && source "$f" || warn "Error in $f. Continuing..."
 done
