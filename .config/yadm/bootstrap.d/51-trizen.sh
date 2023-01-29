@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-trizen --version >/dev/null && return
-target="/tmp/trizen"
 info "Installing trizen..."
+trizen --version >/dev/null && warn "Trizen already installed, exiting." && return
+target="/tmp/trizen"
 info "Updating packages..."
 sudo pacman -Syu
 info "Done updating packages."

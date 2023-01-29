@@ -31,5 +31,5 @@ warn() {
 }
 err() {
   echo -e "${ERROR} $*"
-  return 1
+  return
 }

@@ -5,5 +5,5 @@ packages="$HOME/.config/yadm/packages"
 
 
 for f in "$HOME"/.config/yadm/bootstrap.d/*.sh; do
-  [ -f "$f" ] && source "$f"
+  [ -f "$f" ] && source "$f" || warn "Error in $f. Continuing..."
 done
