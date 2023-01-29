@@ -28,7 +28,7 @@ autoload -U promptinit; promptinit
 # }
 #
 _battery() {
-  dir="/sys/class/power_supply/BAT0"
+  dir=$(echo /sys/class/power_supply/BAT*)
   if [ -d "$dir" ]; then
     _label=$(\cat "$dir/capacity")
     _status=$(\cat "$dir/status")
