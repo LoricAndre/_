@@ -1,0 +1,28 @@
+#!/bin/bash
+lock_x11() {
+  i3lock-fancy --clock \
+    \ \# -i /home/loric/wallpapers/active.png \
+    --indicator \
+    --pass-screen-keys --pass-volume-keys \
+    --insidevercolor="5f865f" --insidecolor=00000000 \
+    --insidewrongcolor="d68787" --ringvercolor="85add4" \
+    --ringwrongcolor="d68787" --ringcolor="87afaf" \
+    --line-uses-inside --keyhlcolor="85add4" \
+    --timecolor="4e4e4e" --veriftext="" \
+    --wrongtext="" --radius=100 \
+    --veriftext="" --noinputtext="" \
+    --locktext=""
+}
+
+lock_wl() {
+  waylock \
+    --init-color "#282a36" \
+    --fail-color "#5f865f" \
+    --input-color "#d75f87"
+}
+
+if [[ ${XDG_SESSION_TYPE} == wayland ]]; then
+  lock_wl
+else
+  lock_x11
+fi
