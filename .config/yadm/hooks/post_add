@@ -1,1 +1,1 @@
-yadm submodule foreach git add -u
+# yadm submodule foreach git add -u
