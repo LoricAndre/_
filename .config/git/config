@@ -7,3 +7,14 @@
 	rebase = true
 [push]
 	default = simple
+[alias]
+	co = checkout
+	p = push
+	pl = pull
+	c = commit
+	cm = commit -m
+	a = add
+	au = add -u
+	b = branch
+	sw = switch
+	s = status
