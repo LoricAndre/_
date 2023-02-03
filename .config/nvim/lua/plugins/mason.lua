@@ -14,6 +14,7 @@ local ensure_installed = {
     'rust_analyzer',
     'gopls',
     'tsserver',
+    'jdtls'
   },
   dap = {
     'python',

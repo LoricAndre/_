@@ -12,9 +12,9 @@ function _floatTerm_toggle()
   floatTerm:toggle()
 end
 
-nmap { '<leader>t', _floatTerm_toggle }
-nmap { '<leader>th', function() require 'toggleterm'.toggle(0) end }
-nmap { '<leader>tt', _floatTerm_toggle }
+-- nmap { '<leader>t', _floatTerm_toggle }
+nmap { '<leader>t', function() require 'toggleterm'.toggle(0) end }
+-- nmap { '<leader>tt', _floatTerm_toggle }
 nmap { '<leader>g', _lazygit_toggle }
 
 return require 'toggleterm'.setup {

@@ -42,7 +42,7 @@ local plugins_spec = {
   'catppuccin/nvim', 'RRethy/nvim-base16',
   'lewis6991/impatient.nvim', 'ggandor/lightspeed.nvim',
   'shaunsingh/nord.nvim', 'tiagovla/tokyodark.nvim',
-  'folke/tokyonight.nvim', 'ygm2/rooter.nvim',
+  'folke/tokyonight.nvim',
   'shaunsingh/seoul256.nvim', 'nekonako/xresources-nvim',
   'akinsho/toggleterm.nvim', 'numToStr/Comment.nvim',
   'lukas-reineke/indent-blankline.nvim',
