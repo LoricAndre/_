@@ -1,1 +1,0 @@
-/home/lapinou/.config/nushell/nu_scripts/virtual_environments/conda.nu

@@ -1,1 +1,0 @@
-/home/lapinou/.config/nushell/nu_scripts/data_extraction/ultimate_extractor.nu

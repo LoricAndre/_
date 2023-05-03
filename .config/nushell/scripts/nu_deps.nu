@@ -1,1 +1,0 @@
-/home/lapinou/.config/nushell/nu_scripts/make_release/nu_deps.nu

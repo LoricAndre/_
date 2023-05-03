@@ -1,1 +1,0 @@
-/home/lapinou/.config/nushell/nu_scripts/weather/timed_weather_run_env.nu

@@ -1,1 +1,0 @@
-/home/lapinou/.config/nushell/nu_scripts/custom-menus/current_session_history_menu.nu

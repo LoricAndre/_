@@ -1,1 +1,0 @@
-/home/lapinou/.config/nushell/nu_scripts/helpers/run-c-cpp.nu

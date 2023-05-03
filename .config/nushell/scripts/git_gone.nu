@@ -1,1 +1,0 @@
-/home/lapinou/.config/nushell/nu_scripts/cool-oneliners/git_gone.nu

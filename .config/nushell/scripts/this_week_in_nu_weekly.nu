@@ -1,1 +1,0 @@
-/home/lapinou/.config/nushell/nu_scripts/make_release/this_week_in_nu_weekly.nu

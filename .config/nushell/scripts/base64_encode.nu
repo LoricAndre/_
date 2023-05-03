@@ -1,1 +1,0 @@
-/home/lapinou/.config/nushell/nu_scripts/misc/base64_encode.nu

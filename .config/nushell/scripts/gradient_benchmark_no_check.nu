@@ -1,1 +1,0 @@
-/home/lapinou/.config/nushell/nu_scripts/benchmarks/gradient_benchmark_no_check.nu

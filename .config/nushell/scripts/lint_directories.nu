@@ -1,1 +1,0 @@
-/home/lapinou/.config/nushell/nu_scripts/before_v0.60/lint_directories.nu
