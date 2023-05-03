@@ -1,0 +1,1 @@
+/home/lapinou/.config/nushell/nu_scripts/make_release/20k_club.nu

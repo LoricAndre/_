@@ -1,0 +1,1 @@
+/home/lapinou/.config/nushell/nu_scripts/prompt/full-line.nu

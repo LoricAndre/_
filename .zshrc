@@ -27,3 +27,13 @@ compinit
 for f in $HOME/.config/zsh/*.zsh; do
   [ -f "${f}" ] && source "${f}"
 done
+
+          # Adding wsl-open as a browser for Bash for Windows
+          if [[ $(uname -r) =~ (m|M)icrosoft ]]; then
+            if [[ -z $BROWSER ]]; then
+              export BROWSER=wsl-open
+            else
+              export BROWSER=$BROWSER:wsl-open
+            fi
+          fi
+          

@@ -1,0 +1,1 @@
+/home/lapinou/.config/nushell/nu_scripts/progress_bar/progress_bar_no_back.nu

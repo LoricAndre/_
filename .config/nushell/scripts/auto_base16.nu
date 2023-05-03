@@ -1,0 +1,1 @@
+/home/lapinou/.config/nushell/nu_scripts/base16/auto_base16.nu

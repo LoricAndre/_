@@ -1,0 +1,720 @@
+clear
+ls
+ll
+la
+all
+ls -al
+ls -al | grep test
+ls -al | grep D
+ls -al | where name ~= "D*"
+ls -al | where name = "D*"
+ls -al | where "name" = "D*"
+ls -al
+ls -al Oracle/
+ls -al Oracle
+ls -al Ora*
+ls -al Oracle*
+exa
+which wc
+which uu-wc
+which ls
+clear
+cat ~/.config/nushell/*
+cd `Documents/Biodiv Wind DSI/SQL/`
+ls
+let df = open regulations_recollees_iter.csv
+let df = open-df regulations_recollees_iter.csv
+let df = (open-df regulations_recollees_iter.csv)
+tz atuin
+trizen atuin
+mkdir ~/.local/share/atuin/
+atuin init nu | save ~/.local/share/atuin/init.nu
+source ~/.local/share/atuin/init.nu
+ls
+la
+atuin register -u landre -e loric.andre@pm.me -p $PASS
+read PASS
+let PASS = (input)
+echo $PASS
+atuin register -u landre -e test@example.com -p $PASS
+atuin import auto
+atuin sync
+source ~/.local/share/atuin/init.nu
+ls
+la
+ls -al
+clear
+zoxide init nushell | save -f ~/.zoxide.nu
+trizen -S zoxide
+zoxide init nushell | save -f ~/.zoxide.nu
+source ~/.zoxide.nu
+z init
+zoxide import --from=z "~/.z"
+la
+ls -al
+zoxide import --from=z "/home/lapinou/.z"
+zoxide -l
+zoxide -h
+zoxide edit
+trizen -S fzf
+zoxide edit
+clear
+trizen starship
+trizen -Sy starship
+mkdir ~/.cache/starship
+starship init nu | save -f ~/.cache/starship/init.nu
+source ~/.cache/starship/init.nu
+clear
+starship preset nerd-font-symbols -o ~/.config/starship.toml
+source ~/.cache/starship/init.nu
+ source ~/.cache/starship/init.nu
+cd `Documents/Biodiv Wind DSI/SQL/`
+c
+clear
+ls
+clear
+echo $env.config
+nvim ~/.config/nushell/env.nu
+:qa
+edit env
+echo $env.PATH
+$env | reject config | transpose key val | each {|r| echo $"let-env ($r.key) = '($r.val)'"} | str join (char nl)
+echo $env.PATH
+cat ~/.zshrc
+echo $env.HOME
+echo $HOME
+echo $env.PATH
+cat ~/.zshrc
+ipconfig.exe
+curl "https://www.quechoisir.org/comparatif-smartphone-n431/" -H 'Cookie: atuserid=%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%228dbc64b6-f694-4c12-9c1d-8335fd810f1a%22%2C%22options%22%3A%7B%22end%22%3A%222024-04-13T13%3A19%3A59.783Z%22%2C%22path%22%3A%22%2F%22%7D%7D; atidvisitor=%7B%22name%22%3A%22atidvisitor%22%2C%22val%22%3A%7B%22vrn%22%3A%22-616539-%22%7D%2C%22options%22%3A%7B%22path%22%3A%22%2F%22%2C%22session%22%3A15724800%2C%22end%22%3A15724800%7D%7D; PHPSESSID=r3t8rna0n2cos09evlihgm98g5; UFCQC_SSO=KIqiELbV2IsnuimJxYLS6Kd3N7qrV.Y7JN5XM2pyR5O6Ss8re26eD0SS; UFCQC_SSOCC=b27'
+http get "https://www.quechoisir.org/comparatif-smartphone-n431/" -H 'Cookie: atuserid=%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%228dbc64b6-f694-4c12-9c1d-8335fd810f1a%22%2C%22options%22%3A%7B%22end%22%3A%222024-04-13T13%3A19%3A59.783Z%22%2C%22path%22%3A%22%2F%22%7D%7D; atidvisitor=%7B%22name%22%3A%22atidvisitor%22%2C%22val%22%3A%7B%22vrn%22%3A%22-616539-%22%7D%2C%22options%22%3A%7B%22path%22%3A%22%2F%22%2C%22session%22%3A15724800%2C%22end%22%3A15724800%7D%7D; PHPSESSID=r3t8rna0n2cos09evlihgm98g5; UFCQC_SSO=KIqiELbV2IsnuimJxYLS6Kd3N7qrV.Y7JN5XM2pyR5O6Ss8re26eD0SS; UFCQC_SSOCC=b27'
+http -h
+http get -h
+http get "https://www.quechoisir.org/comparatif-smartphone-n431/" -H ['Cookie' 'atuserid=%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%228dbc64b6-f694-4c12-9c1d-8335fd810f1a%22%2C%22options%22%3A%7B%22end%22%3A%222024-04-13T13%3A19%3A59.783Z%22%2C%22path%22%3A%22%2F%22%7D%7D; atidvisitor=%7B%22name%22%3A%22atidvisitor%22%2C%22val%22%3A%7B%22vrn%22%3A%22-616539-%22%7D%2C%22options%22%3A%7B%22path%22%3A%22%2F%22%2C%22session%22%3A15724800%2C%22end%22%3A15724800%7D%7D; PHPSESSID=r3t8rna0n2cos09evlihgm98g5; UFCQC_SSO=KIqiELbV2IsnuimJxYLS6Kd3N7qrV.Y7JN5XM2pyR5O6Ss8re26eD0SS; UFCQC_SSOCC=b27']
+http get "https://www.quechoisir.org/comparatif-smartphone-n431/" -H ['Cookie' 'atuserid=%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%228dbc64b6-f694-4c12-9c1d-8335fd810f1a%22%2C%22options%22%3A%7B%22end%22%3A%222024-04-13T13%3A19%3A59.783Z%22%2C%22path%22%3A%22%2F%22%7D%7D; atidvisitor=%7B%22name%22%3A%22atidvisitor%22%2C%22val%22%3A%7B%22vrn%22%3A%22-616539-%22%7D%2C%22options%22%3A%7B%22path%22%3A%22%2F%22%2C%22session%22%3A15724800%2C%22end%22%3A15724800%7D%7D; PHPSESSID=r3t8rna0n2cos09evlihgm98g5; UFCQC_SSO=KIqiELbV2IsnuimJxYLS6Kd3N7qrV.Y7JN5XM2pyR5O6Ss8re26eD0SS; UFCQC_SSOCC=b27'] | query web -q 'a'
+http get "https://www.quechoisir.org/comparatif-smartphone-n431/" -H ['Cookie' 'atuserid=%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%228dbc64b6-f694-4c12-9c1d-8335fd810f1a%22%2C%22options%22%3A%7B%22end%22%3A%222024-04-13T13%3A19%3A59.783Z%22%2C%22path%22%3A%22%2F%22%7D%7D; atidvisitor=%7B%22name%22%3A%22atidvisitor%22%2C%22val%22%3A%7B%22vrn%22%3A%22-616539-%22%7D%2C%22options%22%3A%7B%22path%22%3A%22%2F%22%2C%22session%22%3A15724800%2C%22end%22%3A15724800%7D%7D; PHPSESSID=r3t8rna0n2cos09evlihgm98g5; UFCQC_SSO=KIqiELbV2IsnuimJxYLS6Kd3N7qrV.Y7JN5XM2pyR5O6Ss8re26eD0SS; UFCQC_SSOCC=b27'] | query web --query 'a' --attribute 'href'
+query web -h
+url join
+url join -h
+query -h
+nu --version
+http get https://phoronix.com | query web -q 'header'
+http get https://phoronix.com
+http get https://google.com
+http get https://google.com | query web -q 'header'
+which query
+cargo install nu_plugin_query
+http get "https://www.quechoisir.org/comparatif-smartphone-n431/" -H ['Cookie' 'atuserid=%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%228dbc64b6-f694-4c12-9c1d-8335fd810f1a%22%2C%22options%22%3A%7B%22end%22%3A%222024-04-13T13%3A19%3A59.783Z%22%2C%22path%22%3A%22%2F%22%7D%7D; atidvisitor=%7B%22name%22%3A%22atidvisitor%22%2C%22val%22%3A%7B%22vrn%22%3A%22-616539-%22%7D%2C%22options%22%3A%7B%22path%22%3A%22%2F%22%2C%22session%22%3A15724800%2C%22end%22%3A15724800%7D%7D; PHPSESSID=r3t8rna0n2cos09evlihgm98g5; UFCQC_SSO=KIqiELbV2IsnuimJxYLS6Kd3N7qrV.Y7JN5XM2pyR5O6Ss8re26eD0SS; UFCQC_SSOCC=b27'] | query web --query 'a' --attribute 'href'
+def get_links [url] {<\n>http get "https://www.quechoisir.org/comparatif-smartphone-n431/" -H ['Cookie' 'atuserid=%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%228dbc64b6-f694-4c12-9c1d-8335fd810f1a%22%2C%22options%22%3A%7B%22end%22%3A%222024-04-13T13%3A19%3A59.783Z%22%2C%22path%22%3A%22%2F%22%7D%7D; atidvisitor=%7B%22name%22%3A%22atidvisitor%22%2C%22val%22%3A%7B%22vrn%22%3A%22-616539-%22%7D%2C%22options%22%3A%7B%22path%22%3A%22%2F%22%2C%22session%22%3A15724800%2C%22end%22%3A15724800%7D%7D; PHPSESSID=r3t8rna0n2cos09evlihgm98g5; UFCQC_SSO=KIqiELbV2IsnuimJxYLS6Kd3N7qrV.Y7JN5XM2pyR5O6Ss8re26eD0SS; UFCQC_SSOCC=b27'] | query web --query 'a' --attribute 'href'<\n>}
+def get_links [url] {<\n>http get "$url" -H ['Cookie' 'atuserid=%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%228dbc64b6-f694-4c12-9c1d-8335fd810f1a%22%2C%22options%22%3A%7B%22end%22%3A%222024-04-13T13%3A19%3A59.783Z%22%2C%22path%22%3A%22%2F%22%7D%7D; atidvisitor=%7B%22name%22%3A%22atidvisitor%22%2C%22val%22%3A%7B%22vrn%22%3A%22-616539-%22%7D%2C%22options%22%3A%7B%22path%22%3A%22%2F%22%2C%22session%22%3A15724800%2C%22end%22%3A15724800%7D%7D; PHPSESSID=r3t8rna0n2cos09evlihgm98g5; UFCQC_SSO=KIqiELbV2IsnuimJxYLS6Kd3N7qrV.Y7JN5XM2pyR5O6Ss8re26eD0SS; UFCQC_SSOCC=b27'] | query web --query 'a' --attribute 'href'<\n>}
+get_links https://google.com
+def get_links [url] {<\n>http get $url -H ['Cookie' 'atuserid=%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%228dbc64b6-f694-4c12-9c1d-8335fd810f1a%22%2C%22options%22%3A%7B%22end%22%3A%222024-04-13T13%3A19%3A59.783Z%22%2C%22path%22%3A%22%2F%22%7D%7D; atidvisitor=%7B%22name%22%3A%22atidvisitor%22%2C%22val%22%3A%7B%22vrn%22%3A%22-616539-%22%7D%2C%22options%22%3A%7B%22path%22%3A%22%2F%22%2C%22session%22%3A15724800%2C%22end%22%3A15724800%7D%7D; PHPSESSID=r3t8rna0n2cos09evlihgm98g5; UFCQC_SSO=KIqiELbV2IsnuimJxYLS6Kd3N7qrV.Y7JN5XM2pyR5O6Ss8re26eD0SS; UFCQC_SSOCC=b27'] | query web --query 'a' --attribute 'href'<\n>}
+get_links https://google.com
+cargo install nu_plugin_query
+cd src/
+ls
+gh clone nushell/nushell
+gh repo clone nushell/nushell
+cd nushell/crates/
+ls
+cd nu_plugin_query/
+cargo install --path ?
+cargo install --path .
+ls
+cargo build --release
+cargo install nu_plugin_query
+which nu_plugin_query
+register (which nu_plugin_query)
+register $(which nu_plugin_query)
+register which nu_plugin_query
+register (which nu_plugin_query)
+let p = (which nu_plugin_query)
+echo $p
+register $p
+register /usr/sbin/nu_plugin_query
+register /usr/sbin/nu_plugin_query
+get_links https://google.com
+query 
+def get_links [url] {<\n>http get $url -H ['Cookie' 'atuserid=%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%228dbc64b6-f694-4c12-9c1d-8335fd810f1a%22%2C%22options%22%3A%7B%22end%22%3A%222024-04-13T13%3A19%3A59.783Z%22%2C%22path%22%3A%22%2F%22%7D%7D; atidvisitor=%7B%22name%22%3A%22atidvisitor%22%2C%22val%22%3A%7B%22vrn%22%3A%22-616539-%22%7D%2C%22options%22%3A%7B%22path%22%3A%22%2F%22%2C%22session%22%3A15724800%2C%22end%22%3A15724800%7D%7D; PHPSESSID=r3t8rna0n2cos09evlihgm98g5; UFCQC_SSO=KIqiELbV2IsnuimJxYLS6Kd3N7qrV.Y7JN5XM2pyR5O6Ss8re26eD0SS; UFCQC_SSOCC=b27'] | query web --query 'a' --attribute 'href'<\n>}
+get_links https://google.com
+http get "https://www.quechoisir.org/comparatif-smartphone-n431/" -H ['Cookie' 'atuserid=%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%228dbc64b6-f694-4c12-9c1d-8335fd810f1a%22%2C%22options%22%3A%7B%22end%22%3A%222024-04-13T13%3A19%3A59.783Z%22%2C%22path%22%3A%22%2F%22%7D%7D; atidvisitor=%7B%22name%22%3A%22atidvisitor%22%2C%22val%22%3A%7B%22vrn%22%3A%22-616539-%22%7D%2C%22options%22%3A%7B%22path%22%3A%22%2F%22%2C%22session%22%3A15724800%2C%22end%22%3A15724800%7D%7D; PHPSESSID=r3t8rna0n2cos09evlihgm98g5; UFCQC_SSO=KIqiELbV2IsnuimJxYLS6Kd3N7qrV.Y7JN5XM2pyR5O6Ss8re26eD0SS; UFCQC_SSOCC=b27'] | query web --query 'a' --attribute 'href'
+def get_links [uri] {http get $uri -H ['Cookie' 'atuserid=%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%228dbc64b6-f694-4c12-9c1d-8335fd810f1a%22%2C%22options%22%3A%7B%22end%22%3A%222024-04-13T13%3A19%3A59.783Z%22%2C%22path%22%3A%22%2F%22%7D%7D; atidvisitor=%7B%22name%22%3A%22atidvisitor%22%2C%22val%22%3A%7B%22vrn%22%3A%22-616539-%22%7D%2C%22options%22%3A%7B%22path%22%3A%22%2F%22%2C%22session%22%3A15724800%2C%22end%22%3A15724800%7D%7D; PHPSESSID=r3t8rna0n2cos09evlihgm98g5; UFCQC_SSO=KIqiELbV2IsnuimJxYLS6Kd3N7qrV.Y7JN5XM2pyR5O6Ss8re26eD0SS; UFCQC_SSOCC=b27'] | query web --query 'a' --attribute 'href'<\n>}
+get_links https://www.quechoisir.org
+get_links https://www.quechoisir.org | each get_links 
+get_links https://www.quechoisir.org | each {get_links $_}
+get_links https://www.quechoisir.org | each {|uri| get_links $uri}
+get_links https://www.quechoisir.org | each {|uri| if $uri starts-with '^https' { get_links $uri } else { get_links $"https://quechoisir.org/ ($uri)" }}
+get_links https://www.quechoisir.org | each {|uri| if $uri starts-with 'https://' { get_links $uri } else { get_links $"https://quechoisir.org/($uri)" }}
+def rec_get_links [uri] {get_links $uri | each {|uri| if $uri starts-with 'https://' { get_links $uri } else { get_links $"https://quechoisir.org/($uri)" }}}
+def get_links [uri] {http get $uri -H ['Cookie' 'atuserid=%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%228dbc64b6-f694-4c12-9c1d-8335fd810f1a%22%2C%22options%22%3A%7B%22end%22%3A%222024-04-13T13%3A19%3A59.783Z%22%2C%22path%22%3A%22%2F%22%7D%7D; atidvisitor=%7B%22name%22%3A%22atidvisitor%22%2C%22val%22%3A%7B%22vrn%22%3A%22-616539-%22%7D%2C%22options%22%3A%7B%22path%22%3A%22%2F%22%2C%22session%22%3A15724800%2C%22end%22%3A15724800%7D%7D; PHPSESSID=r3t8rna0n2cos09evlihgm98g5; UFCQC_SSO=KIqiELbV2IsnuimJxYLS6Kd3N7qrV.Y7JN5XM2pyR5O6Ss8re26eD0SS; UFCQC_SSOCC=b27'] | query web --query 'a' --attribute 'href' ; echo $in <\n>}
+get_links https://www.quechoisir.org | each {|uri| if $uri starts-with 'https://' { get_links $uri } else { get_links $"https://quechoisir.org/($uri)" }}
+def get_links [uri] {http get $uri -H ['Cookie' 'atuserid=%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%228dbc64b6-f694-4c12-9c1d-8335fd810f1a%22%2C%22options%22%3A%7B%22end%22%3A%222024-04-13T13%3A19%3A59.783Z%22%2C%22path%22%3A%22%2F%22%7D%7D; atidvisitor=%7B%22name%22%3A%22atidvisitor%22%2C%22val%22%3A%7B%22vrn%22%3A%22-616539-%22%7D%2C%22options%22%3A%7B%22path%22%3A%22%2F%22%2C%22session%22%3A15724800%2C%22end%22%3A15724800%7D%7D; PHPSESSID=r3t8rna0n2cos09evlihgm98g5; UFCQC_SSO=KIqiELbV2IsnuimJxYLS6Kd3N7qrV.Y7JN5XM2pyR5O6Ss8re26eD0SS; UFCQC_SSOCC=b27'] | (query web --query 'a' --attribute 'href' ; echo $in) <\n>}
+get_links https://www.quechoisir.org
+save -h
+def get_links [uri] {http get $uri -H ['Cookie' 'atuserid=%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%228dbc64b6-f694-4c12-9c1d-8335fd810f1a%22%2C%22options%22%3A%7B%22end%22%3A%222024-04-13T13%3A19%3A59.783Z%22%2C%22path%22%3A%22%2F%22%7D%7D; atidvisitor=%7B%22name%22%3A%22atidvisitor%22%2C%22val%22%3A%7B%22vrn%22%3A%22-616539-%22%7D%2C%22options%22%3A%7B%22path%22%3A%22%2F%22%2C%22session%22%3A15724800%2C%22end%22%3A15724800%7D%7D; PHPSESSID=r3t8rna0n2cos09evlihgm98g5; UFCQC_SSO=KIqiELbV2IsnuimJxYLS6Kd3N7qrV.Y7JN5XM2pyR5O6Ss8re26eD0SS; UFCQC_SSOCC=b27'] | tee $"$(uri).html" | query web --query 'a' --attribute 'href'<\n>}
+get_links https://www.quechoisir.org
+def get_links [uri] {http get $uri -H ['Cookie' 'atuserid=%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%228dbc64b6-f694-4c12-9c1d-8335fd810f1a%22%2C%22options%22%3A%7B%22end%22%3A%222024-04-13T13%3A19%3A59.783Z%22%2C%22path%22%3A%22%2F%22%7D%7D; atidvisitor=%7B%22name%22%3A%22atidvisitor%22%2C%22val%22%3A%7B%22vrn%22%3A%22-616539-%22%7D%2C%22options%22%3A%7B%22path%22%3A%22%2F%22%2C%22session%22%3A15724800%2C%22end%22%3A15724800%7D%7D; PHPSESSID=r3t8rna0n2cos09evlihgm98g5; UFCQC_SSO=KIqiELbV2IsnuimJxYLS6Kd3N7qrV.Y7JN5XM2pyR5O6Ss8re26eD0SS; UFCQC_SSOCC=b27'] | tee $"$($uri).html" | query web --query 'a' --attribute 'href'<\n>}
+def get_links [uri] {http get $uri -H ['Cookie' 'atuserid=%7B%22name%22%3A%22atuserid%22%2C%22val%22%3A%228dbc64b6-f694-4c12-9c1d-8335fd810f1a%22%2C%22options%22%3A%7B%22end%22%3A%222024-04-13T13%3A19%3A59.783Z%22%2C%22path%22%3A%22%2F%22%7D%7D; atidvisitor=%7B%22name%22%3A%22atidvisitor%22%2C%22val%22%3A%7B%22vrn%22%3A%22-616539-%22%7D%2C%22options%22%3A%7B%22path%22%3A%22%2F%22%2C%22session%22%3A15724800%2C%22end%22%3A15724800%7D%7D; PHPSESSID=r3t8rna0n2cos09evlihgm98g5; UFCQC_SSO=KIqiELbV2IsnuimJxYLS6Kd3N7qrV.Y7JN5XM2pyR5O6Ss8re26eD0SS; UFCQC_SSOCC=b27'] | tee $"($uri).html" | query web --query 'a' --attribute 'href'<\n>}
+get_links https://www.quechoisir.org
+ls
+cd src/
+ls
+mcd nu-scrape
+mkdir nu-scrape
+cd nu-scrape/
+ls
+nu scrape.nu
+nu -c scrape.nu
+which nu
+chmod +x ./scrape.nu
+./scrape.nu
+ls
+./scrape.nu
+ls
+cat quechoisir.org.html
+c
+clear
+mkdir scraped
+ls
+rm quechoisir.org.html
+ls
+clear
+./scrape.nu
+ls
+ls scraped
+./scrape.nu
+ls
+ls scraped
+tree
+ls scraped/
+\tree
+exa
+exa scraped
+./scrape.nu
+..
+cd nu-scrape/
+ls scraped/
+./scrape.nu
+./scrape.nu https://quechoisir.org
+url join -h
+ls scraped/
+./scrape.nu https://quechoisir.org
+ls scraped/
+./scrape.nu https://quechoisir.org
+ls scraped/
+rm scraped/*
+./scrape.nu https://quechoisir.org
+ls scraped/
+./scrape.nu https://quechoisir.org
+ls scraped/
+./scrape.nu https://quechoisir.org
+ls scraped/
+cd src/nu-scrape/
+l
+ls
+./scrape.nu https://quechoisir.org
+ls scraped/
+ls
+./scrape.nu https://quechoisir.org
+ls
+rm scraped/*
+./scrape.nu https://quechoisir.org
+write -h
+save -h
+./scrape.nu https://quechoisir.org
+ls scraped/
+./scrape.nu https://quechoisir.org
+ls scraped/
+./scrape.nu https://quechoisir.org
+./scrape.nu https://quechoisir.org/plan-du-site
+./scrape.nu quechoisir.org/plan-du-site
+ls scraped/
+./scrape.nu quechoisir.org/plan-du-site
+cd src/nu-scrape/
+ls
+ls scraped/
+ls `scraped/https:/quechoisir.org/#.html`
+ls `scraped/https:/quechoisir.org/`
+cd scraped/https:/quechoisir.org/
+ls
+./scrape.nu quechoisir.org/plan-du-site
+cd `Documents/Biodiv Wind DSI/SQL/`
+ls
+which cp
+which whoami
+source ~/.config/nushell/aliases.nu
+echo (which cp).built-in
+source ~/.config/nushell/aliases.nu
+which bat
+which fkdjsh
+len (which fkdjsh)
+length (which fkdjsh)
+(which fkdjsh | length)
+source ~/.config/nushell/aliases.nu
+echo not
+which not
+not
+source ~/.config/nushell/aliases.nu
+which whoami
+(which whoami).built-in
+(which whoami).built-in[0]
+(which whoami)[0].built-in
+(which whoami).built-in | get 0
+source ~/.config/nushell/aliases.nu
+which whoami
+which whoami | length
+echo [not]
+echo [not true]
+echo (not true)
+echo (not ((which whoami).built-in | get 0))
+source ~/.config/nushell/aliases.nu
+which whoami
+which l
+which la
+which c
+echo $uucoreutils
+for c in uucoreutils {  let w = (which $c)  if ($w | length) == 0 or (not ((which $c).built-in | get 0)) {    alias $c = $"uu-($c)"  }}
+for c in uucoreutils {  let w = (which $c);  if ($w | length) == 0 or (not ((which $c).built-in | get 0)) {    alias $c = $"uu-($c)"  }}
+which whoami
+for c in uucoreutils {  let w = (which $c);  if ($w | length) == 0 or (not ((which $c).built-in | get 0)) {    echo alias $c = $"uu-($c)"  }}
+for c in uucoreutils {  let w = (which $c);  if ($w | length) == 0 {    echo alias $c = $"uu-($c)"  }}
+for c in uucoreutils {  let w = (which $c);  echo $w; if ($w | length) == 0 {    echo alias $c = $"uu-($c)"  }}
+for c in uucoreutils {  let w = (which $c);  echo $w;}
+source ~/.config/nushell/aliases.nu
+which whoami
+source ~/.config/nushell/aliases.nu
+((which $"($c)").built-in | first 1)
+((which whoami).built-in | first 1)
+((which whoami).built-in | first 1 | get)
+((which whoami).built-in | get 0)
+((which whoami) | get built-in)
+((which whoami) | get built-in | all)
+((which whoami).built-in | any {|x| x})
+((which whoami).built-in | any {|x| $x})
+source ~/.config/nushell/aliases.nu
+which whoami
+((which arch).built-in | any {|x| $x})
+which arch
+source ~/.config/nushell/aliases.nu
+which yes
+source ~/.config/nushell/aliases.nu
+which yes
+which arch
+source ~/.config/nushell/aliases.nu
+ls
+l
+la
+l
+source ~/.config/nushell/aliases.nu
+l
+which l
+l
+source ~/.config/nushell/aliases.nu
+l
+source ~/.config/nushell/aliases.nu
+l
+source ~/.config/nushell/aliases.nu
+which whoami
+arch
+cat README.md
+which cat
+^cat README.md
+source ~/.config/nushell/aliases.nu
+which whoami
+source ~/.config/nushell/aliases.nu
+which yes
+alias yes = uu-yes
+which yes
+source ~/.config/nushell/aliases.nu
+which whoami
+which yes
+source ~/.config/nushell/aliases.nu
+cat README.md .zoxide.nu
+source ~/.config/nushell/aliases.nu
+which cat
+source ~/.config/nushell/aliases.nu
+whtr
+wthr
+:e
+source ~/.config/nushell/aliases.nu
+:e
+nohd test
+source ~/.config/nushell/aliases.nu
+nohd test
+ls
+rm nohup.out
+ls
+date
+date now
+date format
+date format -h
+date now | date format "%Y-%m-%d_%H:%M:%S"
+source ~/.config/nushell/aliases.nu
+nohd test
+source ~/.config/nushell/aliases.nu
+nohd test
+ls /tmp/test_2023-04-18_16:51:28.out
+cat /tmp/test_2023-04-18_16:51:28.out
+nohd yes
+ls /tmp/yes_2023-04-18_16:52:00.out
+cat $_
+cat /tmp/yes_2023-04-18_16:52:00.out
+nohd whoami
+cat /tmp/whoami_2023-04-18_16:52:37.out
+nohd yes
+man nohup
+tz -S pueue
+ls
+ls .local/share/yadm/
+ls .config/yadm/
+cd src/
+ls
+cd 
+cd bin/
+ls
+cd
+cd .config/nushell/
+ls
+git clone git@github.com:nushell/nu_scripts.git
+use ~/.config/ nu_scripts/*/*.nu
+use ~/.config/nu_scripts/*/*.nu
+glob ~/.config/nu_scripts/*/*.nu
+glob ~/.config/nu_scripts/**.nu
+glob ~/.config/nu_scripts/**/.nu
+glob ~/.config/nu_scripts/**/*.nu
+glob ~/.config/nushell/nu_scripts/**/*.nu
+glob ~/.config/nushell/nu_scripts/*/*.nu
+glob ~/.config/nushell/nu_scripts/*
+ls ~/.config/nushell/nu_scripts/*
+ls ~/.config/nushell/nu_scripts/
+ls ~/.config/nushell/nu_scripts/*/
+ls ~/.config/nushell/nu_scripts/*/*.nu
+glob ~/.config/nushell/nu_scripts/*/*.nu
+(ls ~/.config/nushell/nu_scripts/*/*.nu) | each {|f| use $f}
+(ls ~/.config/nushell/nu_scripts/*/*.nu) | each {|f| use $f.name}
+ls ~/.config/nushell/nu_scripts/*/*.nu | each {|f| use $f.name}
+ls ~/.config/nushell/nu_scripts/*/*.nu | each {|f| echo $f}
+ls ~/.config/nushell/nu_scripts/*/*.nu | get name | each {|f| echo $f}
+ls ~/.config/nushell/nu_scripts/*/*.nu | get name | each {|f| use $f}
+echo $env.NU_LIB_DIRS
+mkdir ~/.config/nushell/scripts
+ln -h
+which ln
+ls ~/.config/nushell/nu_scripts/*/*.nu | get name | each {|f| ln -s $f ~/.config/nushell/scripts}
+use job.nu
+job status
+pueud
+pueueud
+peued
+pueued
+systemctl --user enable --now pueued.service
+job status
+job spawn whoami
+job spawn {whoami}
+job status
+job logs
+job log
+job log 0
+job logs 0
+job log 0
+pueue log 0
+job log 0 | get output
+n ~/.config/yadm/
+source ~/.config/nushell/aliases.nu
+n ~/.config/yadm/
+yadm 
+yadm add ~/.config/nushell/
+yadm submodule register ~/.config/nush
+yadm submodule register ~/.config/nushell/nu_scripts/
+yadm submodule add ~/.config/nushell/nu_scripts/
+git rm --cached .config/nushell/nu_scripts/
+yadm rm --cached .config/nushell/nu_scripts/
+yadm rm -f --cached .config/nushell/nu_scripts/
+yadm submodule add git@github.com:nushell/nu_script ~/.config/nushell/nu_scripts/
+rm ~/.config/nushell/nu_scripts/ -rf
+yadm submodule add git@github.com:nushell/nu_script ~/.config/nushell/nu_scripts/
+yadm submodule add git@github.com:nushell/nu_scripts ~/.config/nushell/nu_scripts/
+job log 0 | get output
+use job.nu
+job log 0 | get output
+nvim ~/.config/nushell/aliases.nu
+:qa
+ls ~/.config/nushell/scripts/
+use wolframalpha.nu 
+use weatherdark.nu 
+use starship.nu 
+use get-weather.nu 
+get-weather
+get_weather
+weather
+cat ~/.config/nushell/scripts/get-weather.nu
+ls /mnt/c/Users/loric/
+c
+clear
+source ~/.config/nushell/aliases.nu
+c
+l
+winget.exe uninstall vlc
+choco.exe install vlc
+gsudo.exe install vlc
+gsudo.exe choco.exe install vlc
+cd `Documents/Biodiv Wind DSI/SQL/`
+head regulations_recollees_iter.csv
+tail regulations_recollees_iter.csv
+open regulations_recollees_iter.csv
+grep 'Artigues' regulations_recollees_iter.csv
+grep 'Artigues' regulations_recollees_iter.csv | wc -l
+grep 'Artigues' regulations_recollees_iter.csv | cat
+grep 'Artigues' regulations_recollees_iter.csv | bat
+l
+ls
+ssh Oracle
+py regulations.py regul_3m_recol.csv
+python3 regulations.py regul_3m_recol.csv
+ls
+python3 regulations.py regulations.csv regul_3m_recol.csv
+cd `Documents/Biodiv Wind DSI/SQL/`
+ls
+wc -l regulations.csv
+cd `Documents/Biodiv Wind DSI/SQL/`
+head regul_3m_recol.csv
+grep 'Artigues' regulations_recollees_iter.csv | cat
+grep 'Artigues' regulations_recollees_iter.csv | bat
+grep 'Artigues' regul_3m_recol.csv | bat
+bat regul_3m_recol.csv
+bat regulations.csv
+grep 'Artigues' regulations.csv | bat
+python3 regulations.py regulations.csv regul_3m_recol.csv
+python3 regulations.py regul_3m.csv regul_3m_recol.csv
+head regul_3m.csv
+python3 regulations.py regul_3m.csv regul_3m_recol.csv
+ls /dev/core
+ls /dev/core/
+ls /dev/core
+cat /sys/class/thermal/thermal_zone*/temp
+cat /sys/class/thermal/*/temp
+ls /sys/class/thermal/*
+ls /sys/class/thermal/
+ls /sys/class/thermal/*
+cat /sys/class/thermal/*
+cat /sys/class/thermal/*/*
+cat /sys/class/thermal/*/device/*
+cat /sys/class/thermal/*/device/thermal_cooling/temp
+cat /sys/class/thermal/*/device/thermal_cooling/*
+cat /sys/class/thermal/*/device/thermal_cooling/device/*
+cat /sys/class/thermal/*/device/
+cat /sys/class/thermal/*/device/*
+paste <(cat /sys/class/thermal/thermal_zone*/type) <(cat /sys/class/thermal/thermal_zone*/temp) | column -s $'\t' -t | sed 's/\(.\)..$/.\1°C/'
+let-env config = ($env.config | upsert table.mode light)
+ls
+let-env config = ($env.config | upsert table.mode thin); ls
+let-env config = ($env.config | upsert table.mode with_love); ls
+let-env config = ($env.config | upsert table.mode light); ls
+let-env config = ($env.config | upsert table.mode light)
+ls
+let-env config = ($env.config | upsert table.mode thin)
+ls
+let-env config = ($env.config | upsert table.mode with_live)
+ls
+let-env config = ($env.config | upsert table.mode with_love)
+ls
+let-env config = ($env.config | upsert table.mode other)
+ls
+let-env config = ($env.config | upsert table.mode thin)
+ls
+let-env config = ($env.config | upsert table.mode light)
+ls
+config nu
+echo $env.DISPLAY
+echo $env.WAYLAND_DISPLAY
+echo $env.MOZ_ENABLE_WAYLANDa
+echo $env.MOZ_ENABLE_WAYLAND
+ls
+config nu
+config env
+which overlay
+overlay -h
+overlay new -h
+overlay use -h
+which dotenv
+def dotenv [f: path] {open $f | each {|l| split column "=" | let-env $"($in.column0)" = $"($in.column1)"}}
+dotenv .env
+ls
+ls src/obsidian2notion/
+la src/obsidian2notion/
+ls -a src/obsidian2notion/
+dotenv src/obsidian2notion/.env
+open src/obsidian2notion/.env
+open src/obsidian2notion/.env | each {|l| split column "="}
+open src/obsidian2notion/.env | table
+open src/obsidian2notion/.env | split rows | each {|l| split column "="}
+open src/obsidian2notion/.env | split row | each {|l| split column "="}
+open src/obsidian2notion/.env | split row "\n" | each {|l| split column "="}
+open src/obsidian2notion/.env | split row "\n"
+open src/obsidian2notion/.env | split row "\n" | table
+open src/obsidian2notion/.env | split row "\n" | each {|l| split column "="}
+open src/obsidian2notion/.env | split row "\n" | each {|l| split column "="} | get 0
+def dotenv [f: path] {open $f | split row '\n' | each {|l| split column "=" | let-env $in.column0 = $in.column1}}
+dotenv src/obsidian2notion/.env
+def dotenv [f: path] {open $f | split row '\n' | each {|l| split column "=" | let-env $in.column1 = $in.column2}}
+dotenv src/obsidian2notion/.env
+def dotenv [f: path] {open $f | split row '\n' | each {|l| split column "=" | echo let-env $in.column1 = $in.column2}}
+dotenv src/obsidian2notion/.env
+dotenv src/obsidian2notion/.env | get 0
+def dotenv [f: path] {open $f | split row '\n' | each {|l| split column "=" | echo let-env ($in.column1 | get 0) = ($in.column2 | get 0)}}
+dotenv src/obsidian2notion/.env
+dotenv src/obsidian2notion/.env | get 0
+dotenv src/obsidian2notion/.env
+dotenv src/obsidian2notion/.env | get 0
+dotenv src/obsidian2notion/.env | get 1
+dotenv src/obsidian2notion/.env | table
+dotenv src/obsidian2notion/.env
+def dotenv [f: path] {open $f | split row '\n' | each {|l| split column "=" | print let-env ($in.column1 | get 0) = ($in.column2 | get 0)}}
+dotenv src/obsidian2notion/.env
+def dotenv [f: path] {open $f | split row '\n' | each {|l| split column "=" | print $"(let-env ($in.column1 | get 0) = ($in.column2 | get 0))"}}
+dotenv src/obsidian2notion/.env
+def dotenv [f: path] {open $f | split row '\n' | each {|l| split column "=" | print let-env ($in.column1 | get 0) = ($in.column2 | get 0)}}
+def dotenv [f: path] {open $f | split column "=" | print $"(let-env ($in.column1 | get 0) = ($in.column2 | get 0))"}
+dotenv src/obsidian2notion/.env
+def dotenv [f: path] {open $f | split column "=" | print let-env ($in.column1 | get 0) = ($in.column2 | get 0)}
+dotenv src/obsidian2notion/.env
+def dotenv [f: path] {open $f | split column "=" | print let-env ($in.column1) = ($in.column2)}
+dotenv src/obsidian2notion/.env
+def dotenv [f: path] {open $f | split column "="}
+dotenv src/obsidian2notion/.env
+open -h
+def dotenv [f: path] {open --raw $f | split column "="}
+dotenv src/obsidian2notion/.env
+def dotenv [f: path] {open --raw $f | split row "\n" | split column "="}
+dotenv src/obsidian2notion/.env
+def dotenv [f: path] {open --raw $f | split row "\n" | split column "=" | each {|l| print $l.column1 $l.column2}}
+dotenv src/obsidian2notion/.env
+def dotenv [f: path] {open --raw $f | split row "\n" | split column "=" | each {|l| print let-env $l.column1 = $l.column2}}
+dotenv src/obsidian2notion/.env
+def dotenv [f: path] {open --raw $f | split row "\n" | split column "=" | each {|l| print lenght $l; print let-env $l.column1 = $l.column2}}
+dotenv src/obsidian2notion/.env
+def dotenv [f: path] {open --raw $f | split row "\n" | split column "=" | each {|l| print ($l | length); print let-env $l.column1 = $l.column2}}
+dotenv src/obsidian2notion/.env
+def dotenv [f: path] {open --raw $f | str trim | split row "\n" | split column "=" | each {|l| print let-env $l.column1 = $l.column2}}
+dotenv src/obsidian2notion/.env
+def dotenv [f: path] {open --raw $f | str trim | split row "\n" | split column "=" | each {|l| let-env $l.column1 = $l.column2}}
+$env
+c
+ls
+config env
+config nu
+let-env EDITOR = nvim
+config env
+nvim regulations.py
+:qa
+cd `Documents/Biodiv Wind DSI/SQL/`
+open inconnues.csv
+open inconnues.csv | where denomination == Artigues | math sum 
+open inconnues.csv | where denomination == Artigues
+open inconnues.csv | group-by denomination
+open inconnues.csv | where denomination == Artigues
+open inconnues.csv | where denomination == Artigues | math sum
+open inconnues.csv | where denomination == La_Baume | math sum
+open inconnues.csv | group-by denomination | math sum
+open inconnues.csv | group-by denomination | each {|p| $p | math sum}
+open inconnues.csv | group-by denomination | each {|p| $p}
+open inconnues.csv | group-by denomination | math sum
+open inconnues.csv | where denomination == La_Baume | math sum
+open inconnues.csv | where denomination == Artigues | math sum
+open inconnues.csv | where denomination == La_Baume | math sum
+open inconnues.csv | where denomination == Artigues | math sum
+open inconnues.csv | group-by denomination | dfr agg (dfr col "count(video_mode.id)" | dfr sum)
+open inconnues.csv | group-by denomination | dfr agg [(dfr col "count(video_mode.id)" | dfr sum)]
+df-open inconnues.csv | dfr group-by denomination | dfr agg [(dfr col "count(video_mode.id)" | dfr sum)]
+open-df inconnues.csv | dfr group-by denomination | dfr agg [(dfr col "count(video_mode.id)" | dfr sum)]
+dfr open inconnues.csv | group-by denomination | dfr agg [(dfr col "count(video_mode.id)" | dfr sum)]
+dfr open inconnues.csv | dfr group-by denomination | dfr agg [(dfr col "count(video_mode.id)" | dfr sum)]
+dfr open inconnues.csv | dfr group-by denomination | dfr agg [(dfr col "count(video_mode.id)" | dfr sum)] | dfr sort "count(video_mode.id)"
+dfr open inconnues.csv | dfr group-by denomination | dfr agg [(dfr col "count(video_mode.id)" | dfr sum)] | dfr sort-by "count(video_mode.id)"
+dfr open inconnues.csv | dfr group-by denomination | dfr agg [(dfr col "count(video_mode.id)" | dfr sum | dfr as n)] | dfr sort-by "count(video_mode.id)"
+dfr open inconnues.csv | dfr group-by denomination | dfr agg [(dfr col "count(video_mode.id)" | dfr sum | dfr as n)] | dfr sort-by n
+dfr open inconnues.csv | dfr group-by mode | dfr agg [(dfr col "count(video_mode.id)" | dfr sum | dfr as n)] | dfr sort-by n
+dfr open inconnues.csv | dfr group-by mode | dfr agg [(dfr col "count(video_mode.id)" | dfr sum | dfr as n)] | dfr sort-by -n
+dfr open inconnues.csv | dfr group-by denomination | dfr agg [(dfr col "count(video_mode.id)" | dfr sum | dfr as n)] | dfr sort-by -n
+dfr open inconnues.csv | dfr group-by denomination | dfr agg [(dfr col "count(video_mode.id)" | dfr sum | dfr as n)] | dfr sort-by n
+dfr open inconnues.csv | dfr group-by denomination
+dfr open inconnues.csv | dfr group-by denomination | dfr agg [(dfr col "count(video_mode.id)" | dfr sum | dfr as n)] | dfr sort-by n
+dfr open inconnues.csv | dfr group-by denomination | dfr agg [(dfr col "denomination") (dfr col "mode") (dfr col "count(video_mode.id)" | dfr as n)] | dfr sort-by n
+dfr open inconnues.csv | dfr group-by denomination | dfr agg [(dfr col "denomination") (dfr col "mode") (dfr col "count(video_mode.id)" | dfr as n)]
+dfr open inconnues.csv | dfr group-by denomination | dfr agg [(dfr col "count(video_mode.id)" | dfr as n)]
+dfr flatten
+dfr open inconnues.csv | dfr group-by denomination | dfr flatten
+dfr open inconnues.csv | dfr group-by denomination
+open inconnues.csv | dfr group-by denomination
+open inconnues.csv | group-by denomination
+open inconnues.csv | group-by denomination | flatten
+open inconnues.csv | group-by denomination | each {|p| $p}
+open inconnues.csv | group-by denomination | each {|p| print $p}
+open inconnues.csv | group-by denomination | each {|p| $p | transpose}
+open inconnues.csv | group-by denomination | each {|p| $p}
+open inconnues.csv | group-by denomination | each {|p| $p | transpose}
+open inconnues.csv | group-by denomination | each {|p| $p | transpose | print}
+open inconnues.csv | group-by denomination | each {|p| $p | transpose parc n| print}
+open inconnues.csv | group-by denomination | each {|p| $p | transpose parc mode | print}
+open inconnues.csv | group-by denomination | each {|p| $p | transpose parc mode | print $in.mode}
+open inconnues.csv | group-by denomination | each {|p| $p | transpose parc mode | print $in.mode | table}
+open inconnues.csv | group-by denomination | each {|p| $p | transpose parc mode | $in.mode | table}
+open inconnues.csv | group-by denomination | each {|p| $p | transpose parc mode | $in.mode | transpose | table}
+open inconnues.csv | group-by denomination | each {|p| $p | transpose parc mode | $in.mode | transpose}
+open inconnues.csv | group-by denomination | each {|p| $p | transpose parc mode | $in.mode | transpose | print $in}
+open inconnues.csv | group-by denomination | each {|p| $p }
+open inconnues.csv | group-by denomination | each {|p| $p.mode }
+open inconnues.csv | group-by denomination | each {|p| $p }
+open inconnues.csv | group-by denomination | each {|p| $p | transpose }
+open inconnues.csv | group-by denomination | each {|p| $p | transpose parc val }
+open inconnues.csv | group-by denomination | each {|p| $p | transpose parc val | $in.val }
+open inconnues.csv | group-by denomination | each {|p| $p }
+open inconnues.csv | group-by denomination | each {|p| $p | transpose parc val | $in.val }
+open inconnues.csv | group-by denomination | each {|p| $p | transpose parc val | $in.val | transpose }
+open inconnues.csv | group-by denomination | each {|p| $p | transpose parc val | $in.val | table}
+open inconnues.csv | group-by denomination | each {|p| $p | transpose parc val | $in.val }
+open inconnues.csv | group-by denomination | each {|p| $p | transpose parc val | $in.val.mode }
+open inconnues.csv | group-by denomination | each {|p| $p | transpose parc val | $in.val}
+open inconnues.csv | group-by denomination | each {|p| $p | transpose parc val | $in.parc}
+open inconnues.csv | group-by denomination | each {|p| $p | transpose parc val | $in.val}
+open inconnues.csv | group-by denomination | each {|p| $p | transpose parc val | $in.val | each {|r| print $r<\n>}}
+open inconnues.csv | group-by denomination | each {|p| $p | transpose parc val | $in.val | each {|r| print $r.mode }}
+open inconnues.csv | group-by denomination | each {|p| $p | transpose parc val | $in.val | each {|r| print $r}}
+open inconnues.csv | group-by denomination | each {|p| $p | transpose parc val | $in.val | each {|r| table}}
+open inconnues.csv | group-by denomination | each {|p| $p | transpose parc val | $in.val | each {|| table}}
+open inconnues.csv | group-by denomination | each {|| transpose parc val | $in.val | each {|| table}}
+let df = []; open inconnues.csv | group-by denomination | each {|| transpose parc val | $in.val | each {|| get denomination}}
+open inconnues.csv | transpose
+let df = []; open inconnues.csv | group-by denomination | each {|| transpose -r }
+let df = []; open inconnues.csv | group-by denomination | each {|| transpose }
+let df = []; open inconnues.csv | group-by denomination | each {|| get mode }
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val }
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | get mode}
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val }
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose -r parc val | get val }
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val }
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | each {|p| [$p | get mode, $p [ get "count(video_mode.id)"]}}
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | each {|p| [$p | get mode, $p | get "count(video_mode.id)"]}}
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | each {|p| [($p | get mode), ($p | get "count(video_mode.id)")]}}
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | each {|p| [($p | where mode == on | get "count(video_mode.id)")]}}
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | each {|p| [($p | where mode == on | get "count(video_mode.id)"), ($p | where mode == off | get "count(video_mode.id)"), ($p | where mode == inconnu_on | get "count(video_mode.id)"]}}
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | each {|p| [($p | where mode == on | get "count(video_mode.id)"), ($p | where mode == off | get "count(video_mode.id)"), ($p | where mode == inconnu_on | get "count(video_mode.id)")]}}
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | each {|p| [($p | where mode == on | get "count(video_mode.id)"), ($p | where mode == off | get "count(video_mode.id)"), ($p | where mode == inconnu_on | get "count(video_mode.id)")] | append $df}}
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | each {|p| [($p | where mode == on | get "count(video_mode.id)"), ($p | where mode == off | get "count(video_mode.id)"), ($p | where mode == inconnu_on | get "count(video_mode.id)")] | print "a" $in}}
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | each {|p| [($p | where mode == on | get "count(video_mode.id)"), ($p | where mode == off | get "count(video_mode.id)"), ($p | where mode == inconnu_on | get "count(video_mode.id)")] | print "a" $in}} | reduce {|it, acc| $acc | append $it}
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | each {|p| [($p | where mode == on | get "count(video_mode.id)"), ($p | where mode == off | get "count(video_mode.id)"), ($p | where mode == inconnu_on | get "count(video_mode.id)")]}} | reduce {|it, acc| $acc | append $it}
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | each {|p| [($p | where mode == on | get "count(video_mode.id)"), ($p | where mode == off | get "count(video_mode.id)"), ($p | where mode == inconnu_on | get "count(video_mode.id)")]}} | print $in
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | each {|p| [($p | where mode == on | get "count(video_mode.id)"), ($p | where mode == off | get "count(video_mode.id)"), ($p | where mode == inconnu_on | get "count(video_mode.id)")]}} | reduce {|it, acc| $acc | append $it}
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | each {|p| [($p | where mode == on | get "count(video_mode.id)"), ($p | where mode == off | get "count(video_mode.id)"), ($p | where mode == inconnu_on | get "count(video_mode.id)")]}} | reduce {|it, acc| $acc | append $it} | table
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | each {|p| [($p | where mode == on | get "count(video_mode.id)"), ($p | where mode == off | get "count(video_mode.id)"), ($p | where mode == inconnu_on | get "count(video_mode.id)")]}} | reduce {|it, acc| $acc | append $it} | flatten
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | each {|p| [($p | where mode == on | get "count(video_mode.id)"), ($p | where mode == off | get "count(video_mode.id)"), ($p | where mode == inconnu_on | get "count(video_mode.id)")]}} | reduce {|it, acc| $acc | append $it} | save /tmp/test.csv
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | each {|p| [($p | where mode == on | get "count(video_mode.id)"), ($p | where mode == off | get "count(video_mode.id)"), ($p | where mode == inconnu_on | get "count(video_mode.id)")]}} | reduce {|it, acc| $acc | append $it} | dfr into-df 
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | each {|p| [($p | where mode == on | get "count(video_mode.id)"), ($p | where mode == off | get "count(video_mode.id)"), ($p | where mode == inconnu_on | get "count(video_mode.id)")]}} | reduce {|it, acc| $acc | merge $it} | dfr into-df 
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | each {|p| [($p | where mode == on | get "count(video_mode.id)"), ($p | where mode == off | get "count(video_mode.id)"), ($p | where mode == inconnu_on | get "count(video_mode.id)")]}} | dfr into-df 
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | each {|p| [($p | get denomination) ($p | where mode == on | get "count(video_mode.id)"), ($p | where mode == off | get "count(video_mode.id)"), ($p | where mode == inconnu_on | get "count(video_mode.id)")]}} | dfr into-df 
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | each {|p| [($p | get denomination) ($p | where mode == on | get "count(video_mode.id)"), ($p | where mode == off | get "count(video_mode.id)"), ($p | where mode == inconnu_on | get "count(video_mode.id)")]}} | dfr into-df | save /tmp/test.csv
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | each {|p| [($p | get denomination) ($p | where mode == on | get "count(video_mode.id)"), ($p | where mode == off | get "count(video_mode.id)"), ($p | where mode == inconnu_on | get "count(video_mode.id)")]}} | dfr into-df | to-csv
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | each {|p| [($p | get denomination) ($p | where mode == on | get "count(video_mode.id)"), ($p | where mode == off | get "count(video_mode.id)"), ($p | where mode == inconnu_on | get "count(video_mode.id)")]}} | dfr into-df | dfr to-csv
+let df = []; open inconnues.csv | group-by denomination | each {|| | transpose parc val | get val  | each {|p| [($p | get denomination) ($p | where mode == on | get "count(video_mode.id)"), ($p | where mode == off | get "count(video_mode.id)"), ($p | where mode == inconnu_on | get "count(video_mode.id)")]}} | dfr into-df | dfr to-csv /tmp/out.csv
+adb uninstall com.google.android.apps.music
+adb shell

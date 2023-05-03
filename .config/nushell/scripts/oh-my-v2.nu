@@ -1,0 +1,1 @@
+/home/lapinou/.config/nushell/nu_scripts/prompt/oh-my-v2.nu

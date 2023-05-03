@@ -1,0 +1,1 @@
+/home/lapinou/.config/nushell/nu_scripts/coloring/24bit-1.nu

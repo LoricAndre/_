@@ -1,0 +1,1 @@
+/home/lapinou/.config/nushell/nu_scripts/nu_101/flag.nu

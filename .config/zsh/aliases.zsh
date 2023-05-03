@@ -27,7 +27,7 @@ alias mkdir="mkdir -p"
 
 alias py='python3'
 cat() {
-  bat $@ || \cat $@
+  bat --version >/dev/null && bat $@ || /usr/bin/env cat $@
 }
 
 alias mkdir='mkdir -p'
@@ -89,4 +89,5 @@ vnmap() {
   nmap -Pn -sV --script vuln $@ | grep -C1 VULNERABLE | grep IDs | sed -n 's/^.*IDs:.*:\(.*\)$/\1/p'
 }
 
-alias pipr='pip install -r'
+alias pipr='python -m pip install -r'
+alias tz=trizen

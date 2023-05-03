@@ -19,15 +19,10 @@ local map = function(mode, a)
   if a.nowait ~= nil then
     opts.nowait = a.nowait
   end
-  if type(rhs) == 'function' then
-    opts.callback = rhs
-    rhs = ''
-  end
   if a.buffer then
-    vim.api.nvim_buf_set_keymap(0, mode, lhs, rhs, opts)
-  else
-    vim.api.nvim_set_keymap(mode, lhs, rhs, opts)
+    opts.buffer = true
   end
+  vim.keymap.set(mode, lhs, rhs, opts)
 end
 
 M.nmap = function(a)

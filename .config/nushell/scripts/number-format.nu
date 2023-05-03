@@ -1,0 +1,1 @@
+/home/lapinou/.config/nushell/nu_scripts/formatting/number-format.nu

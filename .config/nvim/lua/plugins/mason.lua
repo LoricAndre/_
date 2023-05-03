@@ -1,5 +1,4 @@
 local vim = vim
-local coq = require 'coq'
 
 local nmap = require 'utils'.nmap
 local vmap = require 'utils'.vmap
@@ -7,7 +6,7 @@ local vmap = require 'utils'.vmap
 
 local ensure_installed = {
   lsp = {
-    'sumneko_lua',
+    'lua_ls',
     'bashls',
     'pyright',
     'clangd',
@@ -99,10 +98,10 @@ require 'mason-lspconfig'.setup {
 }
 require 'mason-lspconfig'.setup_handlers {
   function(server)
-    require 'lspconfig'[server].setup(coq.lsp_ensure_capabilities {
-      on_attach = config.lsp.on_attach,
-      capabilities = config.lsp.capabilities
-    })
+    require 'lspconfig'[server].setup(require('coq').lsp_ensure_capabilities())
+    --   capabilities = require('cmp_nvim_lsp').default_capabilities(),
+    --   on_attach = config.lsp.on_attach
+    -- }
   end
 }
 
@@ -113,7 +112,6 @@ require 'mason-nvim-dap'.setup {
   automatic_setup = true,
   automatic_installation = true
 }
-require 'mason-nvim-dap'.setup_handlers()
 
 -- NULL LS
 require 'mason-null-ls'.setup {
@@ -121,5 +119,7 @@ require 'mason-null-ls'.setup {
   automatic_setup = true,
   automatic_installation = true
 }
-require 'null-ls'.setup()
-require 'mason-null-ls'.setup_handlers()
+require 'null-ls'.setup {
+  sources = { require('null-ls').builtins.diagnostics.markdownlint_cli2.with { args = { "$FILENAME" } } },
+  debug = true,
+}

@@ -1,4 +1,4 @@
-local plugins_spec = {
+require 'utils'.pack {
   ['nvim-telescope/telescope.nvim'] = {
     requires = {
       'nvim-lua/popup.nvim', { 'nvim-lua/plenary.nvim', opt = false },
@@ -22,10 +22,6 @@ local plugins_spec = {
   },
   ['nvim-treesitter/nvim-treesitter'] = {
     run = ':TSUpdate',
-    event = 'BufRead'
-  },
-  ['michaelb/sniprun'] = {
-    run = 'bash ./install.sh'
   },
   ['williamboman/mason.nvim'] = {
     requires = {
@@ -42,9 +38,8 @@ local plugins_spec = {
   'catppuccin/nvim', 'RRethy/nvim-base16',
   'lewis6991/impatient.nvim', 'ggandor/lightspeed.nvim',
   'shaunsingh/nord.nvim', 'tiagovla/tokyodark.nvim',
-  'folke/tokyonight.nvim',
+  'folke/tokyonight.nvim', { 'norcalli/nvim-colorizer.lua', config = function() require 'colorizer'.setup() end },
   'shaunsingh/seoul256.nvim', 'nekonako/xresources-nvim',
   'akinsho/toggleterm.nvim', 'numToStr/Comment.nvim',
-  'lukas-reineke/indent-blankline.nvim',
+  'lukas-reineke/indent-blankline.nvim'
 }
-return require 'utils'.pack(plugins_spec)

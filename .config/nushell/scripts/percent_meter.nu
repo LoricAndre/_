@@ -1,0 +1,1 @@
+/home/lapinou/.config/nushell/nu_scripts/progress_bar/percent_meter.nu

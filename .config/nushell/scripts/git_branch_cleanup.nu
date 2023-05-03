@@ -1,0 +1,1 @@
+/home/lapinou/.config/nushell/nu_scripts/git/git_branch_cleanup.nu

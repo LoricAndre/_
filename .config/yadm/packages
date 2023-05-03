@@ -1,7 +1,5 @@
 neovim-git
-zsh
 antigen
-exa
 bat
 nvm
 lazygit
@@ -9,3 +7,7 @@ github-cli
 xdg-utils
 yadm
 openssh
+nushell
+pueue
+starship
+fzf

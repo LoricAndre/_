@@ -1,0 +1,1 @@
+/home/lapinou/.config/nushell/nu_scripts/helpers/update_hosts.nu

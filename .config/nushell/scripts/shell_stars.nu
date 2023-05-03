@@ -1,0 +1,1 @@
+/home/lapinou/.config/nushell/nu_scripts/webscraping/shell_stars.nu

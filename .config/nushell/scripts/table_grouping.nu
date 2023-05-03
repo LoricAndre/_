@@ -1,0 +1,1 @@
+/home/lapinou/.config/nushell/nu_scripts/misc/table_grouping.nu

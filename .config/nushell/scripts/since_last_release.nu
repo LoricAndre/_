@@ -1,0 +1,1 @@
+/home/lapinou/.config/nushell/nu_scripts/make_release/since_last_release.nu

@@ -1,18 +1,20 @@
-require 'base16-colorscheme'.setup {
-  base00 = "#{{ env.color0 }}",
-  base01 = "#{{ env.color1 }}",
-  base02 = "#{{ env.color2 }}",
-  base03 = "#{{ env.color3 }}",
-  base04 = "#{{ env.color4 }}",
-  base05 = "#{{ env.color5 }}",
-  base06 = "#{{ env.color6 }}",
-  base07 = "#{{ env.color7 }}",
-  base08 = "#{{ env.color8 }}",
-  base09 = "#{{ env.color9 }}",
-  base0A = "#{{ env.color10 }}",
-  base0B = "#{{ env.color11 }}",
-  base0C = "#{{ env.color12 }}",
-  base0D = "#{{ env.color13 }}",
-  base0E = "#{{ env.color14 }}",
-  base0F = "#{{ env.color15 }}",
-}
+-- require 'base16-colorscheme'.setup {
+--   base00 = "#{{ env.color0 }}",
+--   base01 = "#{{ env.color1 }}",
+--   base02 = "#{{ env.color2 }}",
+--   base03 = "#{{ env.color3 }}",
+--   base04 = "#{{ env.color4 }}",
+--   base05 = "#{{ env.color5 }}",
+--   base06 = "#{{ env.color6 }}",
+--   base07 = "#{{ env.color7 }}",
+--   base08 = "#{{ env.color8 }}",
+--   base09 = "#{{ env.color9 }}",
+--   base0A = "#{{ env.color10 }}",
+--   base0B = "#{{ env.color11 }}",
+--   base0C = "#{{ env.color12 }}",
+--   base0D = "#{{ env.color13 }}",
+--   base0E = "#{{ env.color14 }}",
+--   base0F = "#{{ env.color15 }}",
+-- }
+
+vim.cmd [[ colorscheme catppuccin-macchiato ]]

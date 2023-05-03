@@ -1,0 +1,1 @@
+/home/lapinou/.config/nushell/nu_scripts/example-config/init.nu
