@@ -10,46 +10,46 @@ bat() {
   fi
   if [[ $status != Charging ]]; then
     if (( $label == 100 )); then
-      icon=" "
+      icon="󰁹 "
     elif (( $label >= 90 )); then
-      icon=" "
+      icon="󰂂 "
     elif (( $label >= 80 )); then
-      icon=" "
+      icon="󰂁 "
     elif (( $label >= 70 )); then
-      icon=" "
+      icon="󰂀 "
     elif (( $label >= 60 )); then
-      icon=" "
+      icon="󰁿 "
     elif (( $label >= 50 )); then
-      icon=" "
+      icon="󰁾 "
     elif (( $label >= 40 )); then
-      icon=" "
+      icon="󰁽 "
     elif (( $label >= 30 )); then
-      icon=" "
+      icon="󰁽 "
     elif (( $label >= 20 )); then
-      icon=" "
+      icon="󰁻 "
     elif (( $label >= 10 )); then
-      icon=" "
-    else icon=" "
+      icon="󰁺 "
+    else icon="󰂃 "
     fi
   else
-    icon=" "
+    icon="󰂉 "
   fi
   printf "%s%s%%" "$icon" "$label"
 }
 net() {
   conn=$(nmcli device | grep " connected ")
   if [ -z "$conn" ]; then
-    printf "睊 "
+    printf "󰖪 "
     return 0
   fi
   type=$(echo $conn | awk '{print $2}')
   if [[ $type == wifi ]]; then
-    icon="直 "
+    icon="󰖩 "
     ssid="$(echo $conn | awk '{for(i=4;i<=NF;++i)print $4}' | grep -e '[a-zA-Z0-9]+')"
   elif [[ $type == ethernet ]]; then
-    icon=" "
+    icon="󰈀 "
   else
-    icon="ﯳ "
+    icon="󰛵 "
   fi
   device=$(echo $conn | cut -d' ' -f1)
   ip=$(nmcli device show $device | grep "IP4.ADDRESS\[1\]" | awk '{print $2}' | cut -d'/' -f1)
@@ -69,21 +69,22 @@ bright() {
   curr=$(brightnessctl g)
   max=$(brightnessctl m)
   percent=$(( 100*curr/max ))
-  printf "%s%s%%" " " "$percent"
+  printf "%s%s%%" "󰃛 " "$percent"
 }
 
 volume() {
   vol=$(pamixer --get-volume)
+  muted=$(pamixer --get-mute)
   # vol="$(amixer get Master | awk -F 'Left:|[][]' 'BEGIN {RS=""}{ print substr($2, 1, length($2)-1) }')"
   if ((vol < 30)); then
-    icon="奄"
+    icon="󰕿"
   elif ((vol < 80)); then
-    icon="奔"
+    icon="󰖀"
   else
-    icon="墳"
+    icon="󰕾"
   fi
-  if [[ $(amixer get Master | awk -F 'Left:|[][]' 'BEGIN {RS=""}{ print $6 }') == off ]]; then
-    icon="婢"
+  if [[ $muted == true ]]; then
+    icon="󰖁"
   fi
   printf "%s%s%%" "$icon" "$vol"
 }
@@ -93,13 +94,13 @@ net_wpa() {
   inet=$(iw dev | grep Interface | awk '{printf $2}' | grep ".")
   ssid=$(iw dev | grep ssid | awk '{printf $2}')
   if [ -z $inet ]; then
-    printf "睊 "
+    printf "󰖪 "
   else
     ip=$(ip route | head -n 1 | awk '{print $3}')
     if [ -z $ssid ]; then 
-      printf " %s" "$ip"
+      printf "󰈀 %s" "$ip"
     else
-      printf "直 %s : %s" "$ssid" "$ip"
+      printf "󰖩 %s : %s" "$ssid" "$ip"
     fi
   fi
 }
@@ -119,7 +120,10 @@ mem() {
 }
 
 # sep='::'
-notify-send -t 2000 -i hwinfo "$(date +%T)" "$(clock)\n$(net_wpa)\n$(bat)\n$(volume)\n$(bright)\n$(bat)"
+notify-send -t 2000 -i hwinfo "$(date +%T)" "$(clock)\n$(net_wpa)\n$(bat)\n$(volume)\n$(bright)\n"
+echo "$(date +%T)" "$(clock)\n$(net_wpa)\n$(bat)\n$(volume)\n$(bright)\n"
+
+
 # while true; do
 #   echo "$(bright) $sep $(volume) $sep $(mem) $sep $(clock) $sep $(bat)"
 #   sleep 0.1

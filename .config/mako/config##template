@@ -1,8 +1,9 @@
 #!/bin/bash
 
 font=monospace 10
-background-color=#{{colorbg}}
-text-color=#{{colorfg}}
-border-color=#{{color5}}
-progress-color=#{{color9}}
+background-color=#{{env.colorbg}}
+text-color=#{{env.colorfg}}
+border-color=#{{env.color5}}
+progress-color=#{{env.color9}}
 default-timeout=1000
+height=150

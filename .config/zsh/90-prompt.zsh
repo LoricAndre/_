@@ -20,7 +20,7 @@ autoload -U promptinit; promptinit
 #         t="$h:$t"
 #       fi
 #     fi
-#     export RPROMPT="%F{cyan} ${t}s %{$reset_color%}"
+#     export RPROMPT="%F{cyan}󰥔 ${t}s %{$reset_color%}"
 #     unset timer
 #   else
 #     export RPROMPT=""
@@ -37,29 +37,29 @@ _battery() {
   fi
   if [[ $_status != Charging ]]; then
     if (( $_label == 100 )); then
-      icon=" "
+      icon="󰁹 "
     elif (( $_label >= 90 )); then
-      icon=" "
+      icon="󰂂 "
     elif (( $_label >= 80 )); then
-      icon=" "
+      icon="󰂁 "
     elif (( $_label >= 70 )); then
-      icon=" "
+      icon="󰂀 "
     elif (( $_label >= 60 )); then
-      icon=" "
+      icon="󰁿 "
     elif (( $_label >= 50 )); then
-      icon=" "
+      icon="󰁾 "
     elif (( $_label >= 40 )); then
-      icon=" "
+      icon="󰁽 "
     elif (( $_label >= 30 )); then
-      icon=" "
+      icon="󰁽 "
     elif (( $_label >= 20 )); then
-      icon=" "
+      icon="󰁻 "
     elif (( $_label >= 10 )); then
-      icon=" "
-    else icon=" "
+      icon="󰁺 "
+    else icon="󰂃 "
     fi
   else
-    icon=" "
+    icon="󰂉 "
   fi
   printf "%s%s%%" "$icon" "$_label"
 }
@@ -72,5 +72,5 @@ _clock() {
 export RPROMPT='%F{cyan}$(_battery)%%  $(_clock) %F{$reset_color%}'
 
 set -o PROMPT_SUBST
-export PROMPT='%B%F{blue}%~ %F{yellow}$(git symbolic-ref --short HEAD 2> /dev/null) %(?.%F{green}.%F{red}✗)%f%b '
+export PROMPT='%B%F{blue}%~ %F{yellow}$(git symbolic-ref --short HEAD 2> /dev/null) %(?.%F{green}󰄾.%F{red}✗)%f%b '
 set -o monitor
