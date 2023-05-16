@@ -7,7 +7,4 @@ github-cli
 xdg-utils
 yadm
 openssh
-nushell
-pueue
-starship
 fzf
