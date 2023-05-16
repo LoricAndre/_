@@ -1,6 +1,6 @@
 #!/usr/bin/env -S bash -i
 
-shell="nu"
+shell="zsh"
 packages="$HOME/.config/yadm/packages"
 
 

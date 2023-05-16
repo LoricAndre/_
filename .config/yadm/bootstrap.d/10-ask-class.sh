@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-read -r -p 'Enable GUI support [y/N] ? ' gui
+[ -z $GUI ] && read -r -p 'Enable GUI support [y/N] ? ' GUI
 
-if [[ $gui =~ [Yy].* ]]; then
+if [[ $GUI =~ [Yy].* ]]; then
   yadm config local.class gui
 else
   yadm config local.class nogui
