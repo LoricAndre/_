@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-[ -z $GUI ] && read -r -p 'Enable GUI support [y/N] ? ' GUI
+read -r -p 'Enable GUI support [y/N] ? ' GUI || GUI=N
 
 if [[ $GUI =~ [Yy].* ]]; then
   yadm config local.class gui
