@@ -91,3 +91,5 @@ vnmap() {
 
 alias pipr='python -m pip install -r'
 alias tz=trizen
+alias vpn_own='sudo tailscale down 2> /dev/null && sudo tailscale up --reset --login-server https://connect.own.security --accept-routes --shields-up --exit-node= --operator=$USER --netfilter-mode=off && tailscale ip && tailscale status'
+alias vpn_own_full='sudo tailscale down 2> /dev/null && sudo tailscale up --reset --login-server https://connect.own.security --accept-routes --exit-node=100.64.0.1 --shields-up --operator=$USER --netfilter-mode=off && tailscale ip && tailscale status'

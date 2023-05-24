@@ -20,13 +20,13 @@ gestures {
 }
 
 general {
-  sensitivity=1
+  sensitivity=1.5
 
   gaps_in=5
   gaps_out=20
   border_size=2
-  col.active_border=0x66ee1111
-  col.inactive_border=0x66333333
+  col.active_border=rgb({{ env.color6 }})
+  col.inactive_border=rgb({{ env.color8 }})
 
 }
 
@@ -62,7 +62,6 @@ exec-once=way-displays > "/tmp/way-displays.${XDG_VTNR}.${USER}.log" 2>&1
 
 bind=SUPER,Q,killactive,
 bind=SUPERSHIFT,E,exit,
-bind=SUPERSHIFT,R,exec,yrice && hyprctl reload
 
 bind=SUPER,F,togglefloating,
 bind=SUPER,Z,fullscreen,1
@@ -134,3 +133,8 @@ bind=,XF86MonBrightnessUp,exec,light -A 5
 bind=,XF86MonBrightnessDown,exec,light -U 5
 bind=,Print,exec,grim - | tee "/home/loric/Pictures/$(date +%Y-%m-%d-%H-%M-%S).png" | wl-copy
 bind=SUPER,Print,exec,grim -g - | tee "/home/loric/Pictures/$(date +%Y-%m-%d-%H-%M-%S).png" | wl-copy
+
+windowrule=noinitialfocus,title:Firefox — Sharing Indicator
+windowrule=nofocus,title:Firefox — Sharing Indicator
+windowrule=float,title:Firefox — Sharing Indicator
+windowrule=size 0 0,title:Firefox — Sharing Indicator
